@@ -1,0 +1,38 @@
+
+
+{% block content %}
+<br>
+<br>
+<div class="container">
+
+  {% if error  %}
+  {{ error }}
+  <br>
+  <br>
+  {% endif %}
+  <form class="form-signin" method="POST" action="{% url 'signUp' %}" >
+    {% csrf_token %}
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name='Email' id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    
+    <label for="Firstname" class="sr-only">Firstname</label>  
+    <input type="text" name='Firstname' id="Firstname" class="form-control" placeholder="Firstname" required autofocus>
+    
+    <label for="Lastname" class="sr-only">Lastname</label>
+    <input type="text" name='Lastname' id="Lastname" class="form-control" placeholder="Lastname" required autofocus>
+    
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name='Password' id="inputPassword" class="form-control" placeholder="Password" required>
+    
+    <label for="inputCPassword" class="sr-only">Confirm Password</label>
+    <input type="password" name='confirmPassword' id="inputCPassword" class="form-control" placeholder="Confirm Password" required>
+
+    <input type="submit"  class="btn btn-lg btn-primary btn-block"  value="Sign Up">
+
+
+
+  </form>
+</div>
+
+{% endblock %}

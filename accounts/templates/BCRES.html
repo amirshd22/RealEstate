@@ -1,0 +1,38 @@
+
+{% block content %}
+<br>
+<br>
+<div class="container">
+
+  {% if error  %}
+  {{ error }}
+  <br>
+  <br>
+  {% endif %}
+  <form class="form-signin" method="POST" action="{% url 'BCRES' %}" >
+    {% csrf_token %}
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name='Email' id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    
+    <label for="Firstname" class="sr-only">Your Estate Name</label>  
+    <input type="text" name='Firstname' id="ESname" class="form-control" placeholder="Name" required autofocus>
+    
+    <label for="Lastname" class="sr-only">address</label>
+    <input type="text" name='Lastname' id="ESadress" class="form-control" placeholder="address" required autofocus>
+    
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name='Password' id="inputPassword" class="form-control" placeholder="Password" required>
+    
+    <label for="inputCPassword" class="sr-only">Confirm Password</label>
+    <input type="password" name='confirmPassword' id="inputCPassword" class="form-control" placeholder="Confirm Password" required>
+
+    <input type="submit"  class="btn btn-lg btn-primary btn-block"  value="Become Real Estate">
+
+
+
+  </form>
+</div>
+
+{% endblock %}
+

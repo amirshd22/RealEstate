@@ -1,0 +1,8 @@
+the point of this application si to make a social media that people can create their own real-state and sell home make money through this also other people can see the home and buy
+every where from their home
+so for this i neeed
+1- i have to make accounts 
+2- i need profiles
+3-i need a top real states
+4- photo-video-and-text with the price of it that even you can change the price everytime you want but once a day
+ 
