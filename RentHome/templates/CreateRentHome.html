@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<br>
+  {% if error  %}
+  {{ error }}
+  <br>
+  <br>
+  {% endif %}
+  <form class="form-signin" method="POST" action="{% url 'CreateRentHome' %}" enctype='multipart/form-data'>
+    {% csrf_token %}
+    <h1 class="h3 mb-3 font-weight-normal  mt-5">Create a new Home</h1>
+    <label for="title" class="sr-only">Title</label>
+    <input type="text" name='title' id="title" class="form-control" placeholder="Title" required autofocus>
+    <br>
+    <label for="body" class="sr-only">includes</label>
+    <input type="textbox" name='includes' id="body" class="form-control" placeholder="includes" required>
+    <br>
+    <label for="body" class="sr-only">address</label>
+    <input type="text" name='address' id="body" class="form-control" placeholder="address" required>
+    <br>
+    <label for="URL" class="sr-only"> the Url of your website</label>
+    <input type="text" name='url' id="URL" class="form-control" placeholder="website url" required>
+    <br>
+    
+    <label for="URL" class="sr-only">your video url</label>
+    <input type="text" name='Video_url' id="URL" class="form-control" placeholder="Video_url" required>
+
+    <br>
+    <label for="URL" class="sr-only">beds</label>
+    <input type="number" name='beds' id="URL" class="form-control" placeholder="beds" required>
+    <br>
+    <label for="URL" class="sr-only">baths</label>
+    <input type="number" name='bath' id="URL" class="form-control" placeholder="baths" required>
+    <br>
+    <label for="URL" class="sr-only">price</label>
+    <input type="number" name='price' id="URL" class="form-control" placeholder="price" required>
+    <br>
+    <label for="URL" class="sr-only">Sqrft</label>
+    <input type="number" name='SQFT' id="URL" class="form-control" placeholder="Sqrft" required>
+    <br>
+    <label for="URL" class="sr-only">new or not</label>
+    <input type="checkbox" name='checkbox' id="URL" class="form-control" placeholder="is it new or not" >
+    <br>
+    Image:
+    <label for="img" class="sr-only">Image</label>
+    <input type="file" name='img' id="img" class="form-control" placeholder="Image" required>
+
+
+    <br/>
+
+
+    <input type="submit"  class="btn btn-lg mb-3  btn-primary btn-block"   value="Create">
+
+  </form>
+</div>
+{% endblock %}

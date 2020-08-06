@@ -6,3 +6,43 @@ so for this i neeed
 3-i need a top real states
 4- photo-video-and-text with the price of it that even you can change the price everytime you want but once a day
  
+
+
+
+ #---------------------------------------------accounts---------------------------------------------------
+                accounts backend is done all is left is to make other pages then come to make the 
+                    frontend just make this clear that people should pay extra money fto become 
+                        real estate
+
+
+
+
+
+
+ #--------------------------------------------Create/rentHomes---------------------------------------------
+                CreateHomes views.py and models.py is finished and i have to make the 
+                fronend and also the details page also there is a like btn that i need to make 
+                fully functional and done 
+                createRentHome is done and fully functional so all we need to do rn is the front 
+                importance 
+
+
+
+#---------------------------------------------Profiles-----------------------------------------------------
+                for profiles first we need a page with a edit profiles button and the image the homes that are
+                still not sold the amount of followers and the amount of followings 
+                and also the amount of likes form other people 
+                
+
+
+
+-----------------------------------------------ideas-------------------------------------------------------
+                1-i want a follow and unfollow stuf (this is possible with the video yu have found)
+                2-i have to make a copmtition between each real estator to make it way more fun for each 
+                    something like that people could choose that which one of the agents should sell their property!(users try to )
+                3-add that in the future that if someone just become a normal suer not an agent 
+
+
+
+
+loading====================20% 

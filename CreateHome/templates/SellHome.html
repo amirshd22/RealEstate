@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="album py-5 bg-light">
+  
+      <H1 class="text-dark mb-3">Homes for sale:</H1> 
+    <div class="row">
+
+      {% for i in key %}
+      <br>
+      <div class="col-lg-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="{{ i.image.url }}" class="bd-placeholder-img card-img-top" alt="img" width="250px" height="250px" >
+          <div class="card-body">
+            <h2 class="card-text ">{{ i.title|upper }}</h2>
+            <small class="card-text text-muted ">{{ i.beds }}</small>
+            <small class="card-text text-muted ">{{ i.bath }}</small>
+            <small class="card-text text-muted ">{{ i.price }}</small>
+            <small class="card-text text-muted ">{{ i.sqft }}</small>
+            <small class="card-text text-muted ">{{ i.newCo }}</small>
+            <small class="card-text text-muted ">{{ i.agent }}</small>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a type="button" href="" role="button" class="btn btn-outline-info my-2">ادامه مطلب</a>
+              </div>
+              <small class="text-muted">{{ i.date }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}
