@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'CreateHome',
     'accounts',
     'RentHome',
-    'BCRealEstate',
     'corsheaders',
     'rest_framework',
     'Profile',
