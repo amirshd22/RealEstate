@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'RentHome',
     'corsheaders',
     'rest_framework',
-    'Profile',
+   
 ]
 
 MIDDLEWARE = [
