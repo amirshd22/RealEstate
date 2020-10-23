@@ -59,4 +59,4 @@ this is what that matters
 
 
 
-loading====================20% 
+loading====================30% 
