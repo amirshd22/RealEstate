@@ -51,7 +51,7 @@ def CreateRentHome(request):
 
 
 def HomeForRent(request):
-    Homes = RentHome.objects.all()
+    Homes = RentHome.objects.order_by('-date').all()
     template = 'RentHome.html'
     context ={
         'key1':Homes

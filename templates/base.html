@@ -96,7 +96,10 @@
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="{% url 'CreateHome' %}">Create Home</a>
           <a class="dropdown-item" href="{% url 'CreateRentHome' %}">Create Rent Home</a>
-          <a class="dropdown-item" href="profiles/{{request.user}}">profile</a>
+          <a class="dropdown-item" href="/profiles/{{request.user}}">profile</a>
+          <a class="dropdown-item" href="{% url 'edit_profile' %}">Edit profile</a>
+
+
         </div>
       </li>
     </ul>

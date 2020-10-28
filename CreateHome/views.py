@@ -51,7 +51,7 @@ def CreateHome(request):
 
 
 def HomeForSale(request):
-    Homes = SellHomes.objects.all()
+    Homes = SellHomes.objects.order_by('-date').all()
     template = 'SellHome.html'
     context ={
         'key':Homes

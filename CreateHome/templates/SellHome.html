@@ -3,6 +3,7 @@
 
 {% block content %}
 
+
 <div class="album py-5 bg-light">
   
       <H1 class="text-dark mb-3">Homes for sale:</H1> 
@@ -20,10 +21,10 @@
             <small class="card-text text-muted ">{{ i.price }}</small>
             <small class="card-text text-muted ">{{ i.sqft }}</small>
             <small class="card-text text-muted ">{{ i.newCo }}</small>
-            <small class="card-text text-muted ">{{ i.agent }}</small>
+            <small class="card-text text-muted "><a href="/profiles/{{i.agent}}">{{ i.agent }}</a></small>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a type="button" href="" role="button" class="btn btn-outline-info my-2">ادامه مطلب</a>
+                <a type="button" href="{% url 'Homes_Details' i.id %}" role="button" class="btn btn-outline-info my-2">ادامه مطلب</a>
               </div>
               <small class="text-muted">{{ i.date }}</small>
             </div>
@@ -33,4 +34,5 @@
       {% endfor %}
   </div>
 </div>
+
 {% endblock %}

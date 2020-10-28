@@ -46,7 +46,7 @@ this is what that matters
                 for profiles first we need a page with a edit profiles button and the image the homes that are
                 still not sold the amount of followers and the amount of followings 
                 and also the amount of likes form other people 
-                    
+                    so profile is done only follow and unfolow is left all need is that
 
 
 
@@ -59,4 +59,4 @@ this is what that matters
 
 
 
-loading====================30% 
+loading====================35% 

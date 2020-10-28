@@ -1,6 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render, redirect
-
+from CreateHome.models import SellHomes
+from RentHome.models import RentHome
 from .forms import ProfileForm, ProfileBasicForm
 from .models import Profile
 
@@ -38,8 +39,13 @@ def profile_update_view(request, *args, **kwargs):
 def profile_detail_view(request, username,*args, **kwargs):
     # get the profile for the passed username
     template= "profile.html"
+    user_sell_homes = SellHomes.objects.filter(agent__username= username).order_by('-date').all()
+    user_rent_homes = RentHome.objects.filter(agent__username= username).order_by('-date').all()
     qs = Profile.objects.filter(user__username=username)
+
+ 
     profile_obj = qs.first()
+    
     is_following = False
     if request.user.is_authenticated:
         user = request.user
@@ -49,6 +55,10 @@ def profile_detail_view(request, username,*args, **kwargs):
         "username": username,
         "profile": profile_obj,
         "is_following": is_following,
+        'sell_homes':user_sell_homes,
+        "rent_home":user_rent_homes,
+     
+     
 
     }
     return render(request, template, context)
