@@ -10,6 +10,6 @@ urlpatterns = [
     path('', views.home , name='home'),
     path('HomesForSale/', include('CreateHome.urls')),
     path('HomesForRent/', include('RentHome.urls')),
-    path('profiles/', include('Profile.urls')),
+    re_path(r'profiles?/', include('Profile.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

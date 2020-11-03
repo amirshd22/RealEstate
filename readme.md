@@ -52,9 +52,9 @@ this is what that matters
 
 -----------------------------------------------ideas-------------------------------------------------------
                 1-i want a follow and unfollow stuf (this is possible with the video yu have found)
-                2-i have to make a copmtition between each real estator to make it way more fun for each 
-                    something like that people could choose that which one of the agents should sell their property!(users try to )
-                3-add that in the future that if someone just become a normal suer not an agent 
+                2-i have to make a copmtition between each agent to make it way more fun for each 
+                    something like that people could choose that which one of the agents should sell their property!(users try to ) idts
+            
 
 
 

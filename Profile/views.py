@@ -4,7 +4,7 @@ from CreateHome.models import SellHomes
 from RentHome.models import RentHome
 from .forms import ProfileForm, ProfileBasicForm
 from .models import Profile
-
+from django.contrib.auth.decorators import login_required
 def profile_update_view(request, *args, **kwargs):
     template = 'editprofile.html'
     if not request.user.is_authenticated: # is_authenticated()
@@ -30,19 +30,20 @@ def profile_update_view(request, *args, **kwargs):
     context = {
         "form": form,
         "btn_label": "Save",
-        "title": "Update Profile"
+        "title": "Update Profile",
+       
     }
     return render(request,template, context)
 
 
-
+@login_required
 def profile_detail_view(request, username,*args, **kwargs):
     # get the profile for the passed username
     template= "profile.html"
     user_sell_homes = SellHomes.objects.filter(agent__username= username).order_by('-date').all()
     user_rent_homes = RentHome.objects.filter(agent__username= username).order_by('-date').all()
     qs = Profile.objects.filter(user__username=username)
-
+ 
  
     profile_obj = qs.first()
     
@@ -57,6 +58,8 @@ def profile_detail_view(request, username,*args, **kwargs):
         "is_following": is_following,
         'sell_homes':user_sell_homes,
         "rent_home":user_rent_homes,
+     
+
      
      
 

@@ -59,7 +59,7 @@ def HomeForRent(request):
 
     return render(request , template , context)
 
-
+@login_required
 def Homes_Details(request ,Home_id):
     template = 'RentHomeDetails.html'
     Homes= get_object_or_404(RentHome, pk=Home_id)
